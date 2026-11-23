@@ -1,0 +1,296 @@
+/* ========================================
+   CAT ENTHUSIASTS
+   Basic CSS Classroom Example
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f3ee;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 88%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.site-header {
+    background-color: #b45b31;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.site-header h1 {
+    margin: 5px 0;
+    font-size: 3rem;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.tagline {
+    max-width: 700px;
+    margin: 10px auto 0;
+}
+
+/* NAVIGATION */
+.main-nav {
+    background-color: #2f2f2f;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #f4b184;
+
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 35px;
+}
+.content-section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 14px;
+}
+.content-section h2 {
+    color: #b85732;
+    margin-top: 0;
+}
+
+/* HERO SECTION */
+
+.hero {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    
+}
+.hero-text {
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    max-width: 520px;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 12px;
+}
+.hero-text h2{
+    margin-top: 0;
+    color: #b85732;
+}
+.button,
+button {
+    display: inline-block;
+    background-color: #d9784a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button:hover,
+button:hover {
+    background-color: #b85732;
+}
+/* CAT CARDS*/
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cat-card {
+    background-color: #fff7f0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ead8cc;
+}
+.cat-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+
+}
+.card-content {
+    padding: 20px;
+}
+.card-content h3 {
+    margin-top: 0;
+    color: #b85732;
+}
+/* TWO COLUMN AREA */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+/* TABLE */
+table {
+    width: 100%;
+   border-collapse: collapse;
+}
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #d9784a;
+    color: white;
+}
+/* MEDIA */
+
+.media-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+.media-box img {
+    width: 100%;
+    border-radius: 12px;
+}
+audio {
+    width: 100%;
+}
+.small-note {
+    font-size: 0.9rem;
+    color: #666666;
+
+}
+/* LINKS*/
+
+.link-list a {
+    color: #b85732;
+}
+.link-list a:hover {
+    color: #7a361f;
+}
+/* FORM */
+.join-section {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font: inherit;
+}
+textarea {
+    resize: vertical;
+}
+/*FOOTER*/
+footer {
+    background-color: #2f2f2f;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+footer p {
+    margin: 4px;
+}
+/*SIMPLE RESPONSIVE DESIGN*/
+
+@media (max-width: 800px){
+    .card-grid
+    .two-column
+    .media-box {
+        grid-template-columns: 1fr;
+    }
+    .hero img {
+        height: 550px;
+    }
+    .hero-text {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+    .main-nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+}
+/*PART 4: JAVASCRIPT INTERACTIVITY*/
+.care-checklist {
+    list-style: none;
+    padding-left: 0;
+}
+.care-checklist label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.care-checklist input[type="checkbox"]{
+    width: auto;
+    accent-color: #b85732;
+}
+#care-progress{
+    font-weight: bold;
+    color: #b85732;
+}
+#form-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+#form-feedback.success{
+    color: #146c37;
+}
+#form-feedback.error {
+    color: #b42318;
+}
